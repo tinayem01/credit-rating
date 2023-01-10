@@ -23,7 +23,7 @@ inputs = {'returnOnAssets':returnOnAssets,'netProfitMargin':netProfitMargin,
           'operatingCashFlowPerShare':operatingCashFlowPerShare, 'operatingCashFlowSalesRatio':operatingCashFlowSalesRatio,
           'returnOnEquity':returnOnEquity,'pretaxProfitMargin': pretaxProfitMargin}
 
-loaded_model = pickle.load(open("front_end/rf.sav", 'rb'))
+loaded_model = pickle.load(open("rf.sav", 'rb'))
 data_in = [[inputs['returnOnAssets'], inputs['netProfitMargin'], inputs['debtRatio'],inputs['returnOnCapitalEmployed'],inputs['operatingProfitMargin'],inputs['quickRatio'], inputs['operatingCashFlowPerShare'], inputs['operatingCashFlowSalesRatio'], inputs['returnOnEquity'],inputs['pretaxProfitMargin']]]
 
 prediction = loaded_model.predict(data_in)
